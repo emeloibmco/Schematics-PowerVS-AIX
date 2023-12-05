@@ -58,7 +58,7 @@ variable "processors" {
   description = "CPUs to assign"
 } 
 variable "zone"{
-  type        = String
-  default     = us-south-1
+  
+  default     = "us-south-1"
   description = "zone of the region"
 }
