@@ -22,11 +22,11 @@ variable "powerinstanceid" {
 
 variable "imagename" {
   description = "Name of the image key to be used"
-  default = "IBMi-72-09-002"
+  default = "7200-05-05"
 }
 
 variable "imageid" {
-  default     = "2a7f5c83-449e-4778-a9a3-f320588d1256"
+  default     = "21418607-2298-4c09-b367-0544d0fc4030"
   description = "Image ID"
 }
  
