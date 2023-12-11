@@ -44,7 +44,7 @@ resource "ibm_pi_instance" "test-instance" {
     pi_processors         = var.processors
     pi_instance_name      = var.instancename
     pi_proc_type          = "shared"
-    pi_image_id           = data.ibm_pi_image.ds_image.id
+    pi_image_id           = ibm_pi_image.powerimages.id
     pi_network {
       network_id = data.ibm_pi_public_network.ds_network.id
     }
