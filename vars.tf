@@ -22,7 +22,7 @@ variable "powerinstanceid" {
 
 variable "imagename" {
   description = "Name of the image key to be used"
-  default = "7200-05-05"
+  default = "7300-01-02"
 }
 
 variable "imageid" {
