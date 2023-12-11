@@ -48,7 +48,7 @@ resource "ibm_pi_instance" "test-instance" {
     pi_network {
       network_id = data.ibm_pi_public_network.ds_network.id
     }
-    pi_key_pair_name      = ibm_pi_key.ssh_key.key_id
+    pi_key_pair_name      = ibm_pi_key.key.key_id
     pi_sys_type           = "s922"
     pi_cloud_instance_id  = var.powerinstanceid
     pi_volume_ids         = [ibm_pi_volume.volume.volume_id]
