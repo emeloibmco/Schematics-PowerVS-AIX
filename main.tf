@@ -11,7 +11,7 @@ data "ibm_pi_image" "ds_image" {
   pi_cloud_instance_id  = var.powerinstanceid
 }
 
-resource "ibm_pi_key" "ssh_key" {
+resource "ibm_pi_key" "key" {
   pi_cloud_instance_id = var.powerinstanceid
   pi_key_name          = var.sshkeyname
   pi_ssh_key           = var.sshkey
