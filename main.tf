@@ -1,4 +1,3 @@
-
 resource "ibm_pi_key" "key" {
   pi_cloud_instance_id = var.powerinstanceid
   pi_key_name          = var.sshkeyname
