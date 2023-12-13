@@ -36,7 +36,7 @@ variable "instancename" {
 }
 
 variable "networkname" {
-  default = "mypublicnw"
+  default = "mypublicnw2"
   description = "Name of the network"
 }
 
