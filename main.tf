@@ -4,12 +4,6 @@ resource "ibm_pi_image" "powerimages"{
   pi_cloud_instance_id  = var.powerinstanceid
 }
 
-data "ibm_pi_image" "ds_image" {
-  depends_on            = [ibm_pi_image.powerimages]
-  pi_image_name         = var.imagename
-  pi_cloud_instance_id  = var.powerinstanceid
-}
-
 resource "ibm_pi_key" "key" {
   pi_cloud_instance_id = var.powerinstanceid
   pi_key_name          = var.sshkeyname
