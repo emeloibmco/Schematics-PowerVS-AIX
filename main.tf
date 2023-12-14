@@ -1,3 +1,15 @@
+resource "ibm_pi_image" "powerimages"{
+  pi_image_name         = var.imagename
+  pi_image_id           = var.imageid
+  pi_cloud_instance_id  = var.powerinstanceid
+}
+
+data "ibm_pi_image" "ds_image" {
+  depends_on            = [ibm_pi_image.powerimages]
+  pi_image_name         = var.imagename
+  pi_cloud_instance_id  = var.powerinstanceid
+}
+
 resource "ibm_pi_key" "key" {
   pi_cloud_instance_id = var.powerinstanceid
   pi_key_name          = var.sshkeyname
@@ -31,7 +43,7 @@ resource "ibm_pi_instance" "test-instance" {
     pi_processors         = var.processors
     pi_instance_name      = var.instancename
     pi_proc_type          = "shared"
-    pi_image_id           = "038969b4-0aa5-4a32-ac74-b81173a5785a"
+    pi_image_id           = data.ibm_pi_image.ds_image.image_id
     pi_network {
       network_id = data.ibm_pi_public_network.ds_network.id
     }
