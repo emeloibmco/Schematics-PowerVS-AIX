@@ -18,6 +18,7 @@ variable "sshkey" {
 }
 
 variable "powerinstanceid" {
+  default = "fecb5c19-6596-4f21-b293-61be89c735f4"
   description = "Power Instance associated with the account"
 }
 
