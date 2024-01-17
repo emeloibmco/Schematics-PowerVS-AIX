@@ -137,5 +137,7 @@ Vuelva a su espacio de trabajo de Power en IBM Cloud, seleccione el espacio de t
 - **Boot images**: La imagen con la que se realizó el despliegue con el mismo **imagename** declarado anteriormente.
 - **Networking** > **Subnets**: La subred usada con el mismo **networkname** declarado anteriormente.
 - **Storage volumes**: Un almacenamiento _test-volume_ de 10 GB.
+
 Con esto finaliza el despliegue.
+
 Autores: IBM Cloud Tech Sales - Juan Diego Tovar Cárdenas.
